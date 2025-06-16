@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Matriks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧮 Kalkulator Matriks</h1>
+            <div class="student-info">
+                <p><strong>Nama:</strong> Fikri Dzakwan</p>
+                <p><strong>NIM:</strong> 411241032</p>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="controls">
+                <div class="size-control">
+                    <label>Ukuran Matriks:</label>
+                    <select id="matrixSize">
+                        <option value="2">2x2</option>
+                        <option value="3" selected>3x3</option>
+                        <option value="4">4x4</option>
+                    </select>
+                </div>
+
+                <div class="operation-buttons">
+                    <button class="btn btn-primary" onclick="performOperation('add')">Penjumlahan (+)</button>
+                    <button class="btn btn-primary" onclick="performOperation('subtract')">Pengurangan (-)</button>
+                    <button class="btn btn-primary" onclick="performOperation('multiply')">Perkalian (×)</button>
+                    <button class="btn btn-secondary" onclick="clearMatrices()">Reset</button>
+                    <button class="btn btn-accent" onclick="fillExampleValues()">Contoh</button>
+                </div>
+            </div>
+
+            <div class="matrices-container">
+                <div class="matrix-section">
+                    <div class="matrix-title">Matriks A</div>
+                    <div class="matrix" id="matrixA"></div>
+                </div>
+
+                <div class="operator" id="operatorDisplay">+</div>
+
+                <div class="matrix-section">
+                    <div class="matrix-title">Matriks B</div>
+                    <div class="matrix" id="matrixB"></div>
+                </div>
+            </div>
+
+            <div class="result-section">
+                <div class="result-title">Hasil Operasi</div>
+                <div class="result-matrix" id="resultMatrix">
+                    <p>Pilih operasi untuk melihat hasil</p>
+                </div>
+                <div id="errorMessage"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
